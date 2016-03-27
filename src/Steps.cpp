@@ -26,5 +26,8 @@
 
 int get_steps(int s)
 {
-	return 0;
+	if (s == 0 || s == 1 || s == 2){
+		return s;
+	}
+	return get_steps(s - 1) + get_steps(s - 2);
 }
